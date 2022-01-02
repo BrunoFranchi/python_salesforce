@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+    <table class="table table-striped table-responsive table-bordered">
+        <title> Calendario</title>
+            <p><strong> Serviço Selecionado</strong> </p>
+                <ul>
+                    <li><p> Serviço Selecionado: {{selecao}}</p></li>
+                    <li><p> Valor: {{ val }}</p></li>
+                    <li><p>Tempo de duração: {{ dur }} </p></li>
+                </ul>
+                <p><strong> Selecione uma data disponível</strong> </p>
+                <tbody>
+                    {% for d in list_days %}
+                    <tr>
+                        <td><a href="{{ url_for('services',type = d.days_avaible) }}"> {{ d.days_avaible}}</a> </td>
+                        <td></td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+    </table>
+</head>
+<body>
+
+</body>
+</html>

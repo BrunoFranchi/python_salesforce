@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validador de datas</title>
+     <p><strong> Serviço Selecionado</strong> </p>
+                <ul>
+                    <li><p> Serviço Selecionado: {{selecao}}</p></li>
+                    <li><p> Valor: {{ val }}</p></li>
+                    <li><p>Tempo de duração: {{ dur }} </p></li>
+                </ul>
+                <p><strong> Selecione uma data disponível</strong> </p>
+                <tbody>
+                    {% for d in list_days %}
+                    <tr>
+                        <td><a href="{{ url_for('services') }}"> {{ d.days_avaible}}</a> </td>
+                        <td></td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+</head>
+<body>
+
+</body>
+</html>
