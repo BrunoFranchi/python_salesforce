@@ -13,7 +13,7 @@ def inicio():
 @app.route('/buscar', methods=['POST', ])
 def busca():
     nome = request.form['nome']
-    driver = webdriver.Chrome(executable_path='chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='static/chromedriver.exe')
     driver.implicitly_wait(10)
     driver.get('http://www.filmesviatorrents.info/')
     driver.implicitly_wait(3)
@@ -39,7 +39,7 @@ def busca():
 @app.route('/selecionar', methods=['POST', ])
 def selecionar():
     numero_escolhido = request.form['nome']
-    driver = webdriver.Chrome(executable_path='chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='static/chromedriver.exe')
     driver.implicitly_wait(10)
     driver.get(endereco[0])
     driver.find_element_by_xpath(f'//*[@id="mainWrapper"]/div/div[{numero_escolhido}]/h2/a').click()

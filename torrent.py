@@ -6,7 +6,7 @@ class Downloads:
         self.links = 'http://www.filmesviatorrents.info/'
         self.escolhido = input('Faça sua busca: ')
         self.nome = self.escolhido
-        self.driver = webdriver.Chrome(executable_path='chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path='static/chromedriver.exe')
         self.driver.implicitly_wait(10)
         self.driver.get(self.links)
         self.driver.implicitly_wait(3)
